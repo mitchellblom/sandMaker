@@ -6,7 +6,11 @@ var SandwichMaker = (function(maker) {
   		"turkey": 1, 
 	  	"bacon": 2,
 	  	"ham": 3
-	  }
+	  };
+
+	maker.getMeatPrices = {
+		return meatPrices
+	};
 
   // Augment the original object with another method
   maker.addMeat = function(choices) {
