@@ -9,9 +9,9 @@ var SandwichMaker = (function(maker) {
 	  }
 
   // Augment the original object with another method
-  maker.addMeat = function(choice) {
-  	if (choice in meatPrices) {
-  		meatSubtotal += meatPrices[choice];
+  maker.addMeat = function(choices) {
+  	if (choices in meatPrices) {
+  		meatSubtotal += meatPrices[choices];
   	}
     return meatPrices;
   };
