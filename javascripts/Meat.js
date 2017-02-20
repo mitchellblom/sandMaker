@@ -8,7 +8,7 @@ var SandwichMaker = (function(maker) {
 	  	"ham": 3
 	  };
 
-	maker.getMeatPrices = {
+	maker.getMeatPrices = function(){
 		return meatPrices
 	};
 
