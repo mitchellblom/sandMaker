@@ -6,26 +6,22 @@
 
 // Get a reference to the <select> element that has all the meat options
 var meatChooser = document.getElementsByName("meat");
-console.log(meatChooser);
+console.log("empty meat inputs: ", meatChooser);
 
 /* 
   A <select> element broadcasts a change event, so you listen for it
   and get the value of the topping from your augmented IIFE
 */
-meatChooser.addEventListener("change", function(event) {
 
-	for (i=0; i < meatChooser.length; i++) { 
-		meatChooser[i]
-
-
-  // Get the value chosen from the DOM
-
-  // selectedTopping = event.target.value;
-
-
+	for (var i = 0; i < meatChooser.length; i++) {
+		meatChooser[i].addEventListener("change", function(event)	{  // Get the value chosen from the DOM
+		addMeat(meatChooser[i].event.input.checked);
+		console.log(addMeat(meatChooser[i].event.input.checked));
+		});
+	}
   // Determine the price of the topping chosen
 
- 
+
+
 
   // Add the topping to the SandwichMaker to increase the total price
-});

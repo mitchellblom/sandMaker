@@ -27,6 +27,6 @@ var SandwichMaker = (function(maker) {
   return maker;
 })(SandwichMaker || {});
 
-    // SandwichMaker.adjustPrice(currentPrice); //withinThisObject.thereIsThisFunctionOrMethod(andIwantToPassThisThruIt)
+    SandwichMaker.adjustPrice(currentPrice); //withinThisObject.thereIsThisFunctionOrMethod(andIwantToPassThisThruIt)
 
     // a method is a funciton that lives on an object
