@@ -14,9 +14,10 @@ console.log("empty meat inputs: ", meatChooser);
 */
 
 	for (var i = 0; i < meatChooser.length; i++) {
-		meatChooser[i].addEventListener("change", function(event)	{  // Get the value chosen from the DOM
-		addMeat(meatChooser[i].event.input.checked);
-		console.log(addMeat(meatChooser[i].event.input.checked));
+		console.log(meatChooser);
+		meatChooser[i].addEventListener("change", function()	{  // Get the value chosen from the DOM
+		SandwichMaker.addMeat(meatChooser[i].input.checked);
+		console.log(addMeat(meatChooser[i].input.checked));
 		});
 	}
   // Determine the price of the topping chosen
