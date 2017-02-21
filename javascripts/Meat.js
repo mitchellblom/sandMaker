@@ -13,13 +13,20 @@ var SandwichMaker = (function(maker) {
 	};
 
   // Augment the original object with another method
-  maker.addMeat = function(choices) {
-  	if (choices in meatPrices) {
-  		toppingPrice += meatPrices[choices];
-  	}
+  maker.addMeat = function(choices, checked) {  // e.target.checked, passed in from DOM
+  	var currentPrice = meatPrices.choices
+  	if (checked === true) {
+       SandwichMaker.adjustPrice(currentPrice);
+      } else {
+        SandwichMaker.adjustPrice(-currentPrice);
+    }
     return meatPrices;
   };
 
   // Return the new, augmented object with the new method on it
   return maker;
 })(SandwichMaker || {});
+
+    // SandwichMaker.adjustPrice(currentPrice); //withinThisObject.thereIsThisFunctionOrMethod(andIwantToPassThisThruIt)
+
+    // a method is a funciton that lives on an object
