@@ -15,9 +15,13 @@ var meatChooser = document.getElementById("meatMenu");
 // Get the value chosen from the DOM
 
 meatChooser.addEventListener("change", function(e)    {
-    meatChooser = e.target.defaultValue;
-    console.log("selected meats: ", meatChooser);  	
-    SandwichMaker.addMeat(meatChooser);
+    // var meatPrices = SandwichMaker.getMeatPrices(meatChooser);
+    // console.log("e.target.checked", e.target.checked);
+    if (e.target.checked) {
+    	SandwichMaker.addMeat(e.target.value);
+    } else {
+    	SandwichMaker.subtractMeat(e.target.value);
+    }
 });
 		
   // Determine the price of the topping chosen

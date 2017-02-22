@@ -6,11 +6,14 @@ var SandwichMaker = (function() {
   // Return the public interface that other code can interact with
 
   return {
-  	getPrice = function(){
-		return currentPrice;
-	};
-    adjustPrice: function(currentPrice) {
+  	getPrice : function(){
+		return totalPrice;
+	},
+    adjustPrice : function(currentPrice) {
       totalPrice += currentPrice;
+      console.log("totalPrice", totalPrice);
+      var totalPriceToDOM = document.getElementById("totalPrice");
+      totalPriceToDOM.innerHTML = totalPrice;
     }
   };
 })();
