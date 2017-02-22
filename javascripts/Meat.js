@@ -9,24 +9,35 @@ var SandwichMaker = (function(maker) {
 	  };
 
 	maker.getMeatPrices = function(){
-		return meatPrices
+		return meatPrices;
 	};
 
-  // Augment the original object with another method
-  maker.addMeat = function(choices, checked) {  // e.target.checked, passed in from DOM
-  	var currentPrice = meatPrices.choices
-  	if (checked === true) {
-       SandwichMaker.adjustPrice(currentPrice);
-      } else {
-        SandwichMaker.adjustPrice(-currentPrice);
-    }
-    return meatPrices;
+  maker.addMeat = function(choices) {     
+    var currentPrice = meatPrices[choices];
+    SandwichMaker.adjustPrice(currentPrice);
   };
-
-  // Return the new, augmented object with the new method on it
-  return maker;
+                                                // Augment the original object with another method
+  return maker;                             // Return the new, augmented object with the new method on it
 })(SandwichMaker || {});
 
-    SandwichMaker.adjustPrice(currentPrice); //withinThisObject.thereIsThisFunctionOrMethod(andIwantToPassThisThruIt)
 
     // a method is a function that lives on an object
+
+
+
+
+
+
+
+// OLD FOR REFERENCE :
+//     maker.addMeat = function(choices, checked) {  // e.target.checked, passed in from DOM
+//     var currentPrice = meatPrices.choices
+//     if (checked === true) {
+//        SandwichMaker.adjustPrice(currentPrice);
+//       } else {
+//         SandwichMaker.adjustPrice(-currentPrice);
+//     }
+//     return meatPrices;
+//   };
+
+    // SandwichMaker.adjustPrice(currentPrice); //withinThisObject.thereIsThisFunctionOrMethod(andIwantToPassThisThruIt)

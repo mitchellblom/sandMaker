@@ -2,7 +2,7 @@
 // var finalSandwichPrice = 0;
 
 // Variable to hold topping that the user selects
-// var selectedTopping;
+// var maker;
 
 // Get a reference to the <select> element that has all the meat options
 var meatChooser = document.getElementById("meatMenu");
@@ -14,12 +14,10 @@ var meatChooser = document.getElementById("meatMenu");
 
 // Get the value chosen from the DOM
 
-meatChooser.addEventListener("change", function(e)	{
-	meatChooser = document.getElementById("meatMenu").childNodes;
-	console.log("empty meat inputs: ", meatChooser);  					
-	for (var i = 0; i < meatChooser.length; i++) {
-		console.log(meatChooser[i].defaultValue);
-	};
+meatChooser.addEventListener("change", function(e)    {
+    meatChooser = e.target.defaultValue;
+    console.log("selected meats: ", meatChooser);  	
+    SandwichMaker.addMeat(meatChooser);
 });
 		
   // Determine the price of the topping chosen

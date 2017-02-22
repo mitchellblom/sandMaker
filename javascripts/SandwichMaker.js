@@ -4,7 +4,11 @@ var SandwichMaker = (function() {
   var totalPrice = 0;
   
   // Return the public interface that other code can interact with
+
   return {
+  	getPrice = function(){
+		return currentPrice;
+	};
     adjustPrice: function(currentPrice) {
       totalPrice += currentPrice;
     }
