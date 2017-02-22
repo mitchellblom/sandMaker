@@ -5,22 +5,23 @@
 // var selectedTopping;
 
 // Get a reference to the <select> element that has all the meat options
-var meatChooser = document.getElementsByName("meat");
-console.log("empty meat inputs: ", meatChooser);
+var meatChooser = document.getElementById("meatMenu");
 
 /* 
   A <select> element broadcasts a change event, so you listen for it
   and get the value of the topping from your augmented IIFE
 */
 
+// Get the value chosen from the DOM
+
+meatChooser.addEventListener("change", function(e)	{
+	meatChooser = document.getElementById("meatMenu").childNodes;
+	console.log("empty meat inputs: ", meatChooser);  					
 	for (var i = 0; i < meatChooser.length; i++) {
-		meatChooser[i].addEventListener("change");
-		console.log(meatChooser[i].addEventListener("change"));
+		console.log(meatChooser[i].defaultValue);
 	};
-		function someFunction()	{  					// Get the value chosen from the DOM
-		addMeat(meatChooser[i].input, meatChooser[i].input.checked.value);
-		console.log(addMeat(meatChooser[i].input, meatChooser[i].input.checked.value));
-		};
+});
+		
   // Determine the price of the topping chosen
 
 
