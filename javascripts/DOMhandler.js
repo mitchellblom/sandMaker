@@ -6,7 +6,12 @@
 
 // Get a reference to the <select> element that has all the meat options
 var meatChooser = document.getElementById("meatMenu");
+var breadChooser = document.getElementById("breadMenu");
+var cheeseChooser = document.getElementById("cheeseMenu");
+var veggieChooser = document.getElementById("veggieMenu");
 
+
+// console.log(breadChooser);
 /* 
   A <select> element broadcasts a change event, so you listen for it
   and get the value of the topping from your augmented IIFE
@@ -14,17 +19,45 @@ var meatChooser = document.getElementById("meatMenu");
 
 // Get the value chosen from the DOM
 
-meatChooser.addEventListener("change", function(e)    {
-    // var meatPrices = SandwichMaker.getMeatPrices(meatChooser);
-    // console.log("e.target.checked", e.target.checked);
+//////////////////// MEAT CHOOSER ///////////////////
+
+meatChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
-    	SandwichMaker.addMeat(e.target.value);
+        SandwichMaker.addMeat(e.target.value);
     } else {
-    	SandwichMaker.subtractMeat(e.target.value);
+        SandwichMaker.subtractMeat(e.target.value);
     }
 });
-		
-  // Determine the price of the topping chosen
 
+//////////////////// BREAD CHOOSER ///////////////////
 
-  // Add the topping to the SandwichMaker to increase the total price
+breadChooser.addEventListener("change", function(e) {
+    if (e.target.checked) {
+        SandwichMaker.addBread(e.target.value);
+    } else {
+        SandwichMaker.subtractBread(e.target.value);
+    }
+});
+
+//////////////////// CHEESE CHOOSER ///////////////////
+
+cheeseChooser.addEventListener("change", function(e) {
+    if (e.target.checked) {
+        SandwichMaker.addCheese(e.target.value);
+    } else {
+        SandwichMaker.subtractCheese(e.target.value);
+    }
+});
+
+//////////////////// VEGGIE CHOOSER ///////////////////
+
+veggieChooser.addEventListener("change", function(e) {
+    if (e.target.checked) {
+        SandwichMaker.addVeggie(e.target.value);
+    } else {
+        SandwichMaker.subtractVeggie(e.target.value);
+    }
+});
+
+// Determine the price of the topping chosen
+// Add the topping to the SandwichMaker to increase the total price
