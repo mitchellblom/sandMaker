@@ -12,6 +12,7 @@ function removeUncheckedToppingsFromDom(e) {
                 }
         selectedToppingsToDOM.innerHTML = selectedToppings;
 }
+var totalPriceToDOM = document.getElementById("totalPrice");
 
 //////////////////// MEAT CHOOSER ///////////////////
 
@@ -67,3 +68,7 @@ veggieChooser.addEventListener("change", function(e) {
 
 // Determine the price of the topping chosen
 // Add the topping to the SandwichMaker to increase the total price
+
+function adjustTotalToDOM (totalPrice) {
+            totalPriceToDOM.innerHTML = totalPrice;
+        };

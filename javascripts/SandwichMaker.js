@@ -12,8 +12,7 @@ var SandwichMaker = (function() {
         adjustPrice: function(currentPrice) {    //currentPrice comes from addingMeatPrice, addingCheesePrice, etc.  
             totalPrice += currentPrice;
             // console.log("totalPrice", totalPrice);
-            var totalPriceToDOM = document.getElementById("totalPrice");
-            totalPriceToDOM.innerHTML = totalPrice;
+            adjustTotalToDOM(totalPrice);
         }
     };
 })();
