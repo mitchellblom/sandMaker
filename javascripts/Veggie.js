@@ -1,10 +1,10 @@
 var SandwichMaker = (function(maker) {
 
     var veggiePrices = {
-        "lettuce": 1,
-        "onion": 2,
-        "tomato": 2,
-        "pepper": 3
+        "Lettuce": 1,
+        "Onion": 2,
+        "Tomato": 2,
+        "Peppers": 3
     };
 
     maker.addVeggie = function(veggie) {                 

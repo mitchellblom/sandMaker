@@ -1,10 +1,10 @@
 var SandwichMaker = (function(maker) {
 
     var cheesePrices = {
-        "colby": 1,
-        "cheddar": 2,
-        "swiss": 2,
-        "american": 3
+        "Colby": 1,
+        "Cheddar": 2,
+        "Swiss": 2,
+        "American": 3
     };
 
     maker.addCheese = function(cheese) {                 

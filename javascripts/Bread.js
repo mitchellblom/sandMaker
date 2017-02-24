@@ -1,10 +1,10 @@
 var SandwichMaker = (function(maker) {
 
     var breadPrices = {
-        "tortilla": 1,
-        "white": 2,
-        "wheat": 2,
-        "rye": 3
+        "Tortilla": 1,
+        "White": 2,
+        "Wheat": 2,
+        "Rye": 3
     };
 
     maker.addBread = function(bread) {
