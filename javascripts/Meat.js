@@ -9,7 +9,7 @@ var SandwichMaker = (function(maker) {
         "ham": 3
     };
 
-    maker.addMeat = function(meat) { // meat is the same as e.target.checked passed from the DOMhandler.js
+    maker.addMeat = function(meat) { // meat is the same as e.target.value passed from the DOMhandler.js
         if (meat === "none") {
             //this is where i would reset the checkboxes
         } else {
@@ -18,13 +18,9 @@ var SandwichMaker = (function(maker) {
         }
     };
     maker.subtractMeat = function(meat) {
-        if (meat === "none") {
-            //this is where i would reset the checkboxes
-        } else {
             var addingMeatPrice = meatPrices[meat];
             SandwichMaker.adjustPrice(-addingMeatPrice);
-        }
-    };
+        };
 
     return maker; // Return the new, augmented object with the new method on it
 })(SandwichMaker || {});
