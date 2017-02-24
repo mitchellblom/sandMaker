@@ -5,7 +5,13 @@ var cheeseChooser = document.getElementById("cheeseMenu");
 var veggieChooser = document.getElementById("veggieMenu");
 var selectedToppings = [];
 var selectedToppingsToDOM = document.getElementById("toppingsSelected");
-// function removeUncheckedToppingsFromDom() {}
+function removeUncheckedToppingsFromDom(e) {
+        var index = selectedToppings.indexOf(e.target.value); 
+            if (index > -1) {
+                selectedToppings.splice(index, 1);
+                }
+        selectedToppingsToDOM.innerHTML = selectedToppings;
+}
 
 //////////////////// MEAT CHOOSER ///////////////////
 
@@ -16,12 +22,7 @@ meatChooser.addEventListener("change", function(e) {
         selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractMeat(e.target.value);
-        // removeUncheckedToppingsFromDom();
-        var index = selectedToppings.indexOf(e.target.value); 
-            if (index > -1) {
-                selectedToppings.splice(index, 1);
-                }
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        removeUncheckedToppingsFromDom(e);
     }
 });
 
@@ -34,11 +35,7 @@ breadChooser.addEventListener("change", function(e) {
         selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractBread(e.target.value);
-        var index = selectedToppings.indexOf(e.target.value); 
-            if (index > -1) {
-                selectedToppings.splice(index, 1);
-                }
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        removeUncheckedToppingsFromDom(e);
     }
 });
 
@@ -51,11 +48,7 @@ cheeseChooser.addEventListener("change", function(e) {
         selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractCheese(e.target.value);
-        var index = selectedToppings.indexOf(e.target.value); 
-            if (index > -1) {
-                selectedToppings.splice(index, 1);
-                }
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        removeUncheckedToppingsFromDom(e);
     }
 });
 
@@ -68,11 +61,7 @@ veggieChooser.addEventListener("change", function(e) {
         selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractVeggie(e.target.value);
-        var index = selectedToppings.indexOf(e.target.value); 
-            if (index > -1) {
-                selectedToppings.splice(index, 1);
-                }
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        removeUncheckedToppingsFromDom(e);
     }
 });
 
