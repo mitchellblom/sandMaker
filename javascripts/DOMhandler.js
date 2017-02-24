@@ -1,33 +1,28 @@
-// Variable to hold the final price. Default to 0.
-// var finalSandwichPrice = 0;
-
-// Variable to hold topping that the user selects
-// var maker;
-
 // Get a reference to the <select> element that has all the meat options
 var meatChooser = document.getElementById("meatMenu");
 var breadChooser = document.getElementById("breadMenu");
 var cheeseChooser = document.getElementById("cheeseMenu");
 var veggieChooser = document.getElementById("veggieMenu");
-
-
-// console.log(breadChooser);
-/* 
-  A <select> element broadcasts a change event, so you listen for it
-  and get the value of the topping from your augmented IIFE
-*/
-
-// Get the value chosen from the DOM
+var selectedToppings = [];
+var selectedToppingsToDOM = document.getElementById("toppingsSelected");
 
 //////////////////// MEAT CHOOSER ///////////////////
 
 meatChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
         SandwichMaker.addMeat(e.target.value);
+        selectedToppings.push(e.target.value);                             
+        selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractMeat(e.target.value);
-    }
-});
+        // var index = selectedToppings.indexOf(e.target.value);   
+        //     if (index > -1) {
+        //         selectedToppings.splice(index, 1);
+        //         }
+        //     for (var i; i < selectedToppings.length; i++) {}
+        //         selectedToppingsToDOM.innerHTML += selectedToppings[i];
+        //     };
+    });
 
 //////////////////// BREAD CHOOSER ///////////////////
 
