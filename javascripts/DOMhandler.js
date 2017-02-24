@@ -15,14 +15,16 @@ meatChooser.addEventListener("change", function(e) {
         selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractMeat(e.target.value);
-        // var index = selectedToppings.indexOf(e.target.value);   
-        //     if (index > -1) {
-        //         selectedToppings.splice(index, 1);
-        //         }
-        //     for (var i; i < selectedToppings.length; i++) {}
-        //         selectedToppingsToDOM.innerHTML += selectedToppings[i];
-        //     };
-    });
+        var index = selectedToppings.indexOf(e.target.value); 
+        // console.log(index);  
+        // console.log("before splice", selectedToppings);
+            if (index > -1) {
+                selectedToppings.splice(index, 1);
+                }
+        // console.log("after splice", selectedToppings);
+        selectedToppingsToDOM.innerHTML = selectedToppings;
+    }
+});
 
 //////////////////// BREAD CHOOSER ///////////////////
 
