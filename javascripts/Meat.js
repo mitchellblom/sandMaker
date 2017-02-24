@@ -3,17 +3,13 @@ var SandwichMaker = (function(maker) {
 
     // Private variable to store the different meat prices
     var meatPrices = {
+        "none": 0,
         "turkey": 1,
         "bacon": 2,
         "ham": 3
     };
 
-    // maker.getMeatPrices = function(){
-    // 	console.log(meatPrices);
-    //    return meatPrices;
-    // };
-
-    maker.addMeat = function(meat) { // meat is the same as e.target.checked 
+    maker.addMeat = function(meat) { // meat is the same as e.target.checked passed from the DOMhandler.js
         if (meat === "none") {
             //this is where i would reset the checkboxes
         } else {
@@ -30,7 +26,6 @@ var SandwichMaker = (function(maker) {
         }
     };
 
-    // Augment the original object with another method
     return maker; // Return the new, augmented object with the new method on it
 })(SandwichMaker || {});
 

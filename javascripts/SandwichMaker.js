@@ -9,9 +9,9 @@ var SandwichMaker = (function() {
         getPrice: function() {
             return totalPrice;
         },
-        adjustPrice: function(currentPrice) { //currentPrice comes from addingMeatPrice, addingCheesePrice, etc.  
+        adjustPrice: function(currentPrice) {    //currentPrice comes from addingMeatPrice, addingCheesePrice, etc.  
             totalPrice += currentPrice;
-            console.log("totalPrice", totalPrice);
+            // console.log("totalPrice", totalPrice);
             var totalPriceToDOM = document.getElementById("totalPrice");
             totalPriceToDOM.innerHTML = totalPrice;
         }
