@@ -1,11 +1,10 @@
-# Sandwich Maker - Da Best!
+# Sandwich Maker - "MitchWich"
 
-# NSS Blog Exercise
 <!-- 
 ![Splashpage](https://raw.githubusercontent. goes here) -->
 
 ## Project Summary:
-Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a Sandwich module, then create individual modules, using IIFE syntax, to augment Sandwich.
+Create a sandwich order form that allows the user to select all the ingredients for a custom deli sandwich. Create a Sandwich module, then create individual modules, using IIFE syntax, to augment.
 
 <hr>
 
@@ -19,18 +18,17 @@ Create a sandwich order form that allows the user to select all the ingredients 
 1. Each IIFE should expose, in its public interface, a method named add{ingredient} (e.g. addMeat or addVeggies) that accepts a single argument. That argument's value should be the ingredient selected by the user.
 1. Additional JavaScript file that handles interacting with the form elements and determining which method should be called.
 
-
 <hr>
 
 ## Demonstrated:
-<!--  - Various font-stacks with links
- - **CSS** border styling and radius
- - **Github** proficiency :shipit:
- - **Bash** navigation and **Terminal** commands
- - Basic **HTML** structure and spacing
- - **Markdown** for project readme files
- - Witty pun skills :muscle: -->
+ - Proficiency using **IIFE** expressions including getters and setters
+ - Creating a functional single page application
+ - Getting and writing **DOM** elements
+ - Utilization of multiple, linked **Javascripts** for one page
+ - Additional **array methods** like *.splice* and *.push*
+ - Navigation of the **Console** to identify and call key values
+ - Knack for name rhymes and sandwich design
 
 ## Personal Comments:
 
-<!-- This project was mostly about me remembering basic **HTML** and **CSS** from my childhood Myspace days. It was *particularly* satisfying to realize proficiency in **Github** and use the **Terminal** to accomplish everything. -->
+This is a fun exercise through which I learned a good deal. **IIFEs**, **key value pairs**, and **DOM manipulation** all clicked for me again on this. Looking forward to applying these functional skills to useful, real world applications.
