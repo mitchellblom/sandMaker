@@ -3,6 +3,7 @@ var meatChooser = document.getElementById("meatMenu");
 var breadChooser = document.getElementById("breadMenu");
 var cheeseChooser = document.getElementById("cheeseMenu");
 var veggieChooser = document.getElementById("veggieMenu");
+var condimentChooser = document.getElementById("condimentMenu");
 var selectedToppings = [];
 var selectedToppingsToDOM = document.getElementById("toppingsSelected");
 function removeUncheckedToppingsFromDom(e) {
@@ -62,6 +63,19 @@ veggieChooser.addEventListener("change", function(e) {
         selectedToppingsToDOM.innerHTML = selectedToppings;
     } else {
         SandwichMaker.subtractVeggie(e.target.value);
+        removeUncheckedToppingsFromDom(e);
+    }
+});
+
+//////////////////// CONDIMENT CHOOSER ///////////////////
+
+condimentChooser.addEventListener("change", function(e) {
+    if (e.target.checked) {
+        SandwichMaker.addCondiment(e.target.value);
+        selectedToppings.push(e.target.value);                             
+        selectedToppingsToDOM.innerHTML = selectedToppings;
+    } else {
+        SandwichMaker.subtractCondiment(e.target.value);
         removeUncheckedToppingsFromDom(e);
     }
 });
