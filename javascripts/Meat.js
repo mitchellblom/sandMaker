@@ -11,7 +11,7 @@ var SandwichMaker = (function(maker) {
 
     maker.addMeat = function(meat) { // meat is the same as e.target.value passed from the DOMhandler.js
         if (meat === "No Meat") {
-            //this is where i would reset the checkboxes
+            // function resetMeatsDom ()
         } else {
             var selectedToppings = [];
             //key values must be in brackets

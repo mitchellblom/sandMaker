@@ -11,9 +11,10 @@ function removeUncheckedToppingsFromDom(e) {
             if (index > -1) {
                 selectedToppings.splice(index, 1);
                 }
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        selectedToppingsToDOM.innerHTML = selectedToppings.join(", ");
 }
 var totalPriceToDOM = document.getElementById("totalPrice");
+var resetMeats = document.getElementById("rmMeat");
 
 //////////////////// MEAT CHOOSER ///////////////////
 
@@ -21,7 +22,7 @@ meatChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
         SandwichMaker.addMeat(e.target.value);
         selectedToppings.push(e.target.value);                             
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        selectedToppingsToDOM.innerHTML = selectedToppings.join(", ");
     } else {
         SandwichMaker.subtractMeat(e.target.value);
         removeUncheckedToppingsFromDom(e);
@@ -34,7 +35,7 @@ breadChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
         SandwichMaker.addBread(e.target.value);
         selectedToppings.push(e.target.value);                             
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        selectedToppingsToDOM.innerHTML = selectedToppings.join(", ");
     } else {
         SandwichMaker.subtractBread(e.target.value);
         removeUncheckedToppingsFromDom(e);
@@ -47,7 +48,7 @@ cheeseChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
         SandwichMaker.addCheese(e.target.value);
         selectedToppings.push(e.target.value);                             
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        selectedToppingsToDOM.innerHTML = selectedToppings.join(", ");
     } else {
         SandwichMaker.subtractCheese(e.target.value);
         removeUncheckedToppingsFromDom(e);
@@ -60,7 +61,7 @@ veggieChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
         SandwichMaker.addVeggie(e.target.value);
         selectedToppings.push(e.target.value);                             
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        selectedToppingsToDOM.innerHTML = selectedToppings.join(", ");
     } else {
         SandwichMaker.subtractVeggie(e.target.value);
         removeUncheckedToppingsFromDom(e);
@@ -73,7 +74,7 @@ condimentChooser.addEventListener("change", function(e) {
     if (e.target.checked) {
         SandwichMaker.addCondiment(e.target.value);
         selectedToppings.push(e.target.value);                             
-        selectedToppingsToDOM.innerHTML = selectedToppings;
+        selectedToppingsToDOM.innerHTML = selectedToppings.join(", ");
     } else {
         SandwichMaker.subtractCondiment(e.target.value);
         removeUncheckedToppingsFromDom(e);
