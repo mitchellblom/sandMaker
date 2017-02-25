@@ -2,16 +2,26 @@ body {
 	text-align: center;
 }
 
+.toppings {
+	display: flex;
+	justify-content: space-around;
+	padding: 0 3%;
+}
+
 .menuItem {
-	display: inline-block;
 	width: 23%;
 	border: 2px solid black;
 	border-radius: 5%;
 	text-align: center;
 }
 
-.toppings {
-	display: flex;
-	justify-content: center;
-	padding: 0 3%;
+.menuItem input {
+	display: inline-block;
+	width: 50%;
+	margin: 0 50px;
+
+}
+
+#toppingsSelected {
+	height: 10px;
 }

@@ -84,5 +84,5 @@ condimentChooser.addEventListener("change", function(e) {
 // Add the topping to the SandwichMaker to increase the total price
 
 function adjustTotalToDOM (totalPrice) {
-            totalPriceToDOM.innerHTML = totalPrice;
+            totalPriceToDOM.innerHTML = "$" + totalPrice;
         };

@@ -1,10 +1,10 @@
 var SandwichMaker = (function(maker) {
 
     var condimentPrices = {
-        "Tabasco": 1,
-        "Hummus": 2,
-        "Mustard": 2,
-        "Oregano": 3
+        "Tabasco": .50,
+        "Hummus": 1,
+        "Mustard": .50,
+        "Oregano": .50
     };
 
     maker.addCondiment = function(condiment) {                 

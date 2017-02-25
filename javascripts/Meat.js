@@ -14,17 +14,19 @@ var SandwichMaker = (function(maker) {
             //this is where i would reset the checkboxes
         } else {
             var selectedToppings = [];
-            var addingMeatPrice = meatPrices[meat]; //key values must be in brackets
+            //key values must be in brackets
+            var addingMeatPrice = meatPrices[meat];
             SandwichMaker.adjustPrice(addingMeatPrice);
         }
     };
     maker.subtractMeat = function(meat) {
-            var addingMeatPrice = meatPrices[meat];                     /// THIS IS WHERE I LEFT OFF
-            SandwichMaker.adjustPrice(-addingMeatPrice);
-            var toppingsSelectedToDOM = document.getElementById("toppingsSelected");
-        };
+        var addingMeatPrice = meatPrices[meat];
+        SandwichMaker.adjustPrice(-addingMeatPrice);
+        var toppingsSelectedToDOM = document.getElementById("toppingsSelected");
+    };
 
-    return maker; // Return the new, augmented object with the new method on it
+    // Return the new, augmented object with the new method on it
+    return maker;
 })(SandwichMaker || {});
 
 
