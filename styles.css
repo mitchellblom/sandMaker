@@ -12,16 +12,17 @@ body {
 	width: 23%;
 	border: 2px solid black;
 	border-radius: 5%;
-	text-align: center;
+	flex-direction: row;
 }
 
 .menuItem input {
-	display: inline-block;
-	width: 50%;
-	margin: 0 50px;
-
+	width: 100px;
 }
 
 #toppingsSelected {
 	height: 10px;
+}
+
+label {
+	width: 110px;
 }
