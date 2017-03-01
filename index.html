@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>MitchWich</title>
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+	<h1>MitchWich</h1>
+	<h1>99 problems, but A Wich Ain't One!</h1>
+
+	<div class="toppings">
+		<div class="menuItem" id="meatMenu">
+			<h4>Meat:</h4>
+			<label for="No Meat"><input type="checkbox" name="meat" value="No Meat">No Meat</label>
+			<label for="Turkey"><input type="checkbox" name="meat" value="Turkey" class="rmMeat">Turkey</label>
+			<label for="Bacon"><input type="checkbox" name="meat" value="Bacon" class="rmMeat">Bacon</label>
+			<label for="Ham"><input type="checkbox" name="meat" value="Ham" class="rmMeat">Ham</label>
+		</div>
+		<div class="menuItem" id="breadMenu">
+			<h4>Bread:</h4>
+			<input type="checkbox" name="bread" value="Tortilla">Tortilla</input>
+			<input type="checkbox" name="bread" value="White">White</input>
+			<input type="checkbox" name="bread" value="Wheat">Wheat</input>
+			<input type="checkbox" name="bread" value="Rye">Rye</input>
+		</div>
+		<div class="menuItem" id="cheeseMenu">
+			<h4>Cheese:</h4>
+			<input type="checkbox" name="cheese" value="Colby">Colby</input>
+			<input type="checkbox" name="cheese" value="Cheddar">Cheddar</input>
+			<input type="checkbox" name="cheese" value="Swiss">Swiss</input>
+			<input type="checkbox" name="cheese" value="American">American</input>
+		</div>
+		<div class="menuItem" id="veggieMenu">
+			<h4>Vegetable:</h4> 
+			<input type="checkbox" name="veggie" value="Lettuce">Lettuce</input>
+			<input type="checkbox" name="veggie" value="Onion">Onion</input>
+			<input type="checkbox" name="veggie" value="Tomato">Tomato</input>
+			<input type="checkbox" name="veggie" value="Peppers">Peppers</input>
+		</div>
+		<div class="menuItem" id="condimentMenu">
+			<h4>Condiment:</h4> 
+			<input type="checkbox" name="condiment" value="Tabasco">Tabasco</input>
+			<input type="checkbox" name="condiment" value="Hummus">Hummus</input>
+			<input type="checkbox" name="condiment" value="Mustard">Mustard</input>
+			<input type="checkbox" name="condiment" value="Oregano">Oregano</input>
+		</div>
+	</div>
+	<div>
+		<h4>Toppings Selected So Far:</h4>
+		<p id="toppingsSelected"></p>							
+
+		<h4>Total cost for your 'wichin sandy:</h4>
+		<p id="totalPrice">0</p>
+	</div>
+
+<script type="text/javascript" src="javascripts/SandwichMaker.js"></script>
+<script type="text/javascript" src="javascripts/DOMhandler.js"></script>
+<script type="text/javascript" src="javascripts/Meat.js"></script>
+<script type="text/javascript" src="javascripts/Bread.js"></script>
+<script type="text/javascript" src="javascripts/Cheese.js"></script>
+<script type="text/javascript" src="javascripts/Veggie.js"></script>
+<script type="text/javascript" src="javascripts/Condiment.js"></script>
+
+</body>
+</html>
